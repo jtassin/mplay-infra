@@ -81,7 +81,7 @@ services:
      - "3410:27017" 
     restart: always 
   mongodb_3_6_1:
-    image: mongo:3.6.1 
+    image: mongo:3.6.6
     environment:
       - MONGO_INITDB_ROOT_PASSWORD
       - MONGO_INITDB_ROOT_USERNAME
