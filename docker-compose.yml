@@ -7,8 +7,9 @@ services:
       - MONGO_INITDB_ROOT_USERNAME
     ports:
      - "3401:27017"
-    restart_policy:
-      condition: always
+    deploy:
+      restart_policy:
+        condition: always
   mongodb_3_4_2:
     image: mongo:3.4.16
     environment:
@@ -16,8 +17,9 @@ services:
       - MONGO_INITDB_ROOT_USERNAME
     ports:
      - "3402:27017"
-    restart_policy:
-      condition: always     
+    deploy:
+      restart_policy:
+        condition: always  
   mongodb_3_4_3:
     image: mongo:3.4.16  
     environment:
@@ -25,8 +27,9 @@ services:
       - MONGO_INITDB_ROOT_USERNAME
     ports:
      - "3403:27017"
-    restart_policy:
-      condition: always     
+    deploy:
+      restart_policy:
+        condition: always    
   mongodb_3_4_4:
     image: mongo:3.4.16  
     environment:
@@ -34,8 +37,9 @@ services:
       - MONGO_INITDB_ROOT_USERNAME
     ports:
      - "3404:27017"
-    restart_policy:
-      condition: always     
+    deploy:
+      restart_policy:
+        condition: always    
   mongodb_3_4_5:
     image: mongo:3.4.16  
     environment:
@@ -43,8 +47,9 @@ services:
       - MONGO_INITDB_ROOT_USERNAME
     ports:
      - "3405:27017"  
-    restart_policy:
-      condition: always     
+    deploy:
+      restart_policy:
+        condition: always    
   mongodb_3_4_6:
     image: mongo:3.4.16  
     environment:
@@ -52,8 +57,9 @@ services:
       - MONGO_INITDB_ROOT_USERNAME
     ports:
      - "3406:27017"   
-    restart_policy:
-      condition: always     
+    deploy:
+      restart_policy:
+        condition: always   
   mongodb_3_4_7:
     image: mongo:3.4.16  
     environment:
@@ -61,8 +67,9 @@ services:
       - MONGO_INITDB_ROOT_USERNAME
     ports:
      - "3407:27017"
-    restart_policy:
-      condition: always     
+    deploy:
+      restart_policy:
+        condition: always   
   mongodb_3_4_8:
     image: mongo:3.4.16  
     environment:
@@ -70,8 +77,9 @@ services:
       - MONGO_INITDB_ROOT_USERNAME
     ports:
      - "3408:27017"
-    restart_policy:
-      condition: always     
+    deploy:
+      restart_policy:
+        condition: always   
   mongodb_3_4_9:
     image: mongo:3.4.16  
     environment:
@@ -79,8 +87,9 @@ services:
       - MONGO_INITDB_ROOT_USERNAME
     ports:
      - "3409:27017"   
-    restart_policy:
-      condition: always     
+    deploy:
+      restart_policy:
+        condition: always   
   mongodb_3_4_10:
     image: mongo:3.4.16  
     environment:
@@ -88,5 +97,6 @@ services:
       - MONGO_INITDB_ROOT_USERNAME
     ports:
      - "3410:27017" 
-    restart_policy:
-      condition: always     
+    deploy:
+      restart_policy:
+        condition: always   
