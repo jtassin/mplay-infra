@@ -80,3 +80,19 @@ services:
     ports:
      - "3410:27017" 
     restart: always 
+  mongodb_3_6_1:
+    image: mongo:3.6.1 
+    environment:
+      - MONGO_INITDB_ROOT_PASSWORD
+      - MONGO_INITDB_ROOT_USERNAME
+    ports:
+     - "3601:27017" 
+    restart: always     
+  mongodb_4_0_1:
+    image: mongo:4.0.1 
+    environment:
+      - MONGO_INITDB_ROOT_PASSWORD
+      - MONGO_INITDB_ROOT_USERNAME
+    ports:
+     - "4001:27017" 
+    restart: always     
