@@ -95,4 +95,12 @@ services:
       - MONGO_INITDB_ROOT_USERNAME
     ports:
      - "4001:27017" 
-    restart: always     
+    restart: always    
+  mongodb_4_0_2:
+    image: mongo:4.0.1 
+    environment:
+      - MONGO_INITDB_ROOT_PASSWORD
+      - MONGO_INITDB_ROOT_USERNAME
+    ports:
+     - "4002:27017" 
+    restart: always        
