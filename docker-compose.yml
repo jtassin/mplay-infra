@@ -140,3 +140,14 @@ services:
     ports:
      - "4202:27017" 
     restart: always      
+  rabbitmq:
+    image: rabbitmq:3-management
+    environment:
+      - RABBITMQ_DEFAULT_PASS=${MONGO_INITDB_ROOT_PASSWORD} 
+    ports:
+     - "15672:15672" 
+     - "5672:5672" 
+    restart: always      
+    volumes:
+      - /db/rabbitmq/mplay:/var/lib/rabbitmq/mplay
+      `
