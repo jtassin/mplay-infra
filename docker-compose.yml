@@ -141,7 +141,9 @@ services:
      - "4202:27017" 
     restart: always      
   rabbitmq:
-    image: rabbitmq:3-management
+    build:
+      context: ./rabbitmq
+      dockerfile: Dockerfile
     environment:
       - RABBITMQ_DEFAULT_PASS=${MONGO_INITDB_ROOT_PASSWORD} 
     ports:
@@ -150,4 +152,5 @@ services:
     restart: always      
     volumes:
       - /db/rabbitmq/mplay:/var/lib/rabbitmq/mnesia
+      - /db/rabbitmq/mplay-plugins:/var/lib/rabbitmq/mnesia
       
