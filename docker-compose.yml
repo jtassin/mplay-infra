@@ -150,4 +150,4 @@ services:
     restart: always      
     volumes:
       - /db/rabbitmq/mplay:/var/lib/rabbitmq/mplay
-      `
+      
