@@ -149,5 +149,5 @@ services:
      - "5672:5672" 
     restart: always      
     volumes:
-      - /db/rabbitmq/mplay:/var/lib/rabbitmq/mplay
+      - /db/rabbitmq/mplay:/var/lib/rabbitmq/mnesia
       
