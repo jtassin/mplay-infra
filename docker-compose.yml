@@ -104,3 +104,12 @@ services:
     ports:
      - "4002:27017" 
     restart: always        
+  mongodb_4_2_2:
+    image: bitnami/mongodb:4.2.0
+    environment:
+      - MONGODB_REPLICA_SET_MODE=primary
+      - MONGODB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD}
+      - MONGODB_REPLICA_SET_KEY=rplSet422
+    ports:
+     - "4202:27017" 
+    restart: always      
