@@ -103,7 +103,34 @@ services:
       - MONGO_INITDB_ROOT_USERNAME
     ports:
      - "4002:27017" 
-    restart: always        
+    restart: always  
+  mongodb_4_0_3:
+    image: bitnami/mongodb:4.0.13
+    environment:
+      - MONGODB_REPLICA_SET_MODE=primary
+      - MONGODB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD}
+      - MONGODB_REPLICA_SET_KEY=rplSet403
+    ports:
+     - "4003:27017" 
+    restart: always      
+  mongodb_4_0_4:
+    image: bitnami/mongodb:4.0.13
+    environment:
+      - MONGODB_REPLICA_SET_MODE=primary
+      - MONGODB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD}
+      - MONGODB_REPLICA_SET_KEY=rplSet404
+    ports:
+     - "4004:27017" 
+    restart: always              
+  mongodb_4_2_1:
+    image: bitnami/mongodb:4.2.1
+    environment:
+      - MONGODB_REPLICA_SET_MODE=primary
+      - MONGODB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD}
+      - MONGODB_REPLICA_SET_KEY=rplSet421
+    ports:
+     - "4201:27017" 
+    restart: always      
   mongodb_4_2_2:
     image: bitnami/mongodb:4.2.0
     environment:
